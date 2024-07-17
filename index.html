@@ -187,14 +187,23 @@
      <!-- Paper video. -->
      <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
-        <img src="./static/images/fig2.pdf"
-                 type="image/pdf" height="100%">
-        <p>The overview of our proposed <span class="dnerf">CoLoRA</span> with <span class="dnerf">PROD</span>. 
-          (a) Our <span class="dnerf">PROD</span> leverages high-quality clean images and synthetic degraded low-quality images for pre-training the model. 
-          (b) Our proposed Contribution based efficient LoRA (<span class="dnerf">CoLoRA</span>) for new IR tasks.
-          The proposed <span class="dnerf">CoLoRA</span> is configured to have different ratio of learnable network parameter (δ) for each layer based on quantified contributions, enabling efficient fine-tuning for new tasks.
-          (c) <span class="dnerf">CoLoRA</span> can be adjusted according to contribution.</p>
+        <h2 class="title is-3">Quantitative Result</h2>
+        <img src="./static/images/Results.png"
+                 type="image/png" height="100%">
+        <p>Performance comparison based on the scale of training data for 6 IR tasks. 
+          In the graph, the results of the 6 IR tasks are averaged for comparison.
+          The x-axis represents the number of training data, and the y-axis is the average PSNR. 
+          In the radar graph, we compare the results of 6 IR tasks with Normalized PSNR at a training data size of 128.  (a) and (b) present experimental results corresponding to pre-training and fine-tuning methods, respectively. (c) and (d) experimental results for the Our <span class="dnerf">CoLoRA</span> with <span class="dnerf">PROD</span> in NAFNet and Restormer. Our proposed <span class="dnerf">CoLoRA</span> (7%) has much fewer tuned network parameters compared to the full fine-tuning (100%) of NAFNet.</p>
+      </div>
+    </div>
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Result</h2>
+        <img src="./static/images/final_results_1.png"
+                 type="image/png" height="100%">
+        <p>Qualitative results evaluated on the 6 IR tasks for our proposed method, generic Random initial + Full tuning and DegAE + Full tuning. Our methods with partial and full tuning yielded visually excellent results for the real IR task, outperforming others.</p>
       </div>
     </div>
   </div>

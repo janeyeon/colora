@@ -14,7 +14,8 @@ body {
 }
 
 .dnerf {
-  font-variant: small-caps;
+  font-weight: 800; /* slightly bold */
+  font-family: 'Arial', sans-serif;
 }
 
 
